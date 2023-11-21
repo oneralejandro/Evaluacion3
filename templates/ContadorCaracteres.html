@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Personas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilosNombreEdad.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Contador de Caracteres</h1>
+        <form action="/ContadorCaracteres" method="POST">
+            <h2>Nombre 1</h2>
+            <label for="nombre1"></label>
+            <input type="text" id="nombre1" name="nombre1" required>
+            <br>
+
+
+            <h2>Nombre 2</h2>
+            <label for="nombre2"></label>
+            <input type="text" id="nombre2" name="nombre2" required>
+            <br>
+
+            <h2>Nombre 3</h2>
+            <label for="nombre2"></label>
+            <input type="text" id="nombre3" name="nombre3" required>
+            <br>
+
+
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if resultado %}
+        <div class="resultado">
+            <p>Resultado: {{ resultado }}</p>
+
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
